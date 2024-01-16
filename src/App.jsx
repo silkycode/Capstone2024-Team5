@@ -4,7 +4,7 @@ import Footer from './Footer';
 function App() {
   return (
     <>
-      <h1>AimPlus Medical Supplies</h1>
+      <h1>Aim Plus Medical Supplies</h1>
       <Footer />
     </>
   )
