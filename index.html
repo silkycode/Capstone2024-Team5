@@ -12,7 +12,7 @@
         <h1>Aim Plus Medical Supplies</h1>
       </div>
 
-      <div id="login-container">
+      <div id="login-container" style="display:none">
         <form id="login-form">
           <input type="text" placeholder="Username" id="username" name="username">
           <input type="text" placeholder="Password" id="password" name="password">
@@ -25,6 +25,27 @@
         </form>
       </div>
 
+      <div id="new-patient-container" style="display:none">
+        <form id="new-patient-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="birthdate">Birthdate:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+          <button type="button" onclick="submitNewPatientForm()">Submit</button>
+        </form>
+      </div>
+
+      <div class="toggle-button-container">
+        <button onclick="showLoginForm()" id="loginForm">Log In</button>
+        <button onclick="showNewPatientForm()" id="newPatientForm">New Patient</button>
+      </div>
+
       <div class="footer">
         <a href="#">Help</a>
         <a href="#">About Us</a>
@@ -32,5 +53,20 @@
       </div>
 
     </div>
+    <script>
+      function showLoginForm() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('newPatientForm').style.display = 'block';
+        document.getElementById('login-container').style.display = 'block';
+        document.getElementById('new-patient-container').style.display = 'none';
+      }
+
+      function showNewPatientForm() {
+        document.getElementById('newPatientForm').style.display = 'none';
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('new-patient-container').style.display = 'block';
+      }
+    </script>
   </body>
 </html>
