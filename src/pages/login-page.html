@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #242424;
+      color: rgba(255, 255, 255, 0.87);
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input {
+      margin-bottom: 16px;
+      padding: 8px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #646cff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #535bf2;
+    }
+
+    .forgot-password {
+      margin-top: 16px;
+      color: #888;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Login Page</h2>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <!-- Confirm password field (hidden by default) -->
+    <label for="confirmPassword" id="confirmPasswordLabel" style="display: none;">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" style="display: none;">
+
+    <button type="button" id="loginButton" onclick="submitLoginForm()">Login</button>
+    <button type="button" id="forgotPasswordButton" class="forgot-password" onclick="forgotPassword()">Forget Password</button>
+  </form>
+
+  <script>
+    function submitLoginForm() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check credentials (Replace this with your authentication logic)
+      if (username === "username" && password === "password") {
+        alert('Login successful!');
+        openPatientDashboard(username); // Open patient dashboard with username
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+
+    function forgotPassword() {
+      alert('Forgot Password clicked!');
+      // Add logic for handling forgot password
+    }
+
+    function openPatientDashboard(username) {
+      // Open the patient dashboard in a new window
+      const patientDashboardWindow = window.open('patient-dashboard.html', 'PatientDashboard', 'width=600,height=600');
+      // Pass username to patient dashboard (you can use a better way to share data)
+      patientDashboardWindow.username = username;
+    }
+  </script>
+</body>
+</html>
