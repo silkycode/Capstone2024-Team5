@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    /* Additional styles can be added here if needed */
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>AIM Plus Medicial Supplies Portal</h1>
+    <div class="card">
+        <button id="loginButton" onclick="openLoginPage()">Log in</button>
+      <button id="newPatientButton" onclick="openNewPatientForm()">New Patient</button>
+    </div>
+  </div>
+
+  <script>
+    function openLoginPage() {
+      // Open the login page in a new window
+      const loginWindow = window.open('login-page.html', 'LoginPage', 'width=400,height=400');
+    }
+
+    // Function to open new patient form in a new window
+    function openNewPatientForm() {
+      // Open the new patient form in a new window
+      const newPatientWindow = window.open('new-patient-form.html', 'NewPatientForm', 'width=400,height=500');
+    }
+  </script>
+</body>
+</html>

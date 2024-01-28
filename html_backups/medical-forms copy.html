@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      background-color: #4b4b4b;
+      color: rgba(255, 255, 255, 0.87);
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px;
+      background-color: #9b9ff3;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #9b9ff3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+    <h1>
+        Medical Forms
+      </h1>
+      <h3>
+        The medical forms needed depends on the medical supply you need.<br>
+        <br>Diabetic products and supplies:
+        <br><sub> Medicaid/Commerical CMN
+        <br>Medicare CMN</sub><br>
+
+        <br>Continuous Glucose Monitoring:
+        <br><sub>Certificate of Medical Necessity 
+        <br>Office notes that include notes from an in-person appointment within the past 6 months and A1c lab results
+        <br><a href='#' id="form362Link1" onclick="openForm362()">AL Medicaid Referral signed by EPSDT certified screener (Form 362)</a>
+        <br><a href='#' id="SampleBillingLink1" onclick="openCurrent_Billing_Invoice_Example()">Billing invoice for desired CGM Sample</a></sub><br>
+        
+        <br>Insulin Pumps:
+        <br><sub><a href='#' id="LetterOfReqLink" onclick="openOmnipod_5_Letter_of_Request_Example()">Certificate of Medical Necessity </a>
+        <br>Office notes that include notes from an in-person appointment within the past 6 months and A1c lab results
+        <br>Insulin pump training contract - proof that patient and guardian attended a training class on their selected insulin pump and will comply with doctor's orders.
+        <br>6 weeks of blood glucose logs with at least 4 readings per day. Can be handwritten or pulled from CGM (Dexcom or Libre) database.
+        <br><a href='#' id="form362Link2" onclick="openForm362()">AL Medicaid Referral signed by EPSDT certified screener (Form 362)</a>
+        <br><a href='#' id="SampleBillingLink2" onclick="openCurrent_Billing_Invoice_Example()">Billing invoice for desired insulin pump</a></sub>
+      </h3>
+
+    <script>
+        function openForm362(){
+            window.location.href = 'https://drive.google.com/file/d/1c4b3gqfEQ_O6paI5ivfO2fxbGGXHqu3k/view?usp=drive_link'
+        }
+
+        function openAIM_Medicaid_Commericial_CMN(){
+            window.location.href = 'https://drive.google.com/file/d/1O0l-x1AjpYPB34gU3UF9JP8anlSpPJMA/view?usp=drive_link'
+        }
+
+        function openCurrent_Billing_Invoice_Example(){
+            window.location.href = 'https://drive.google.com/file/d/19qPM_iUiNNgy8w7l6xvSeo8WJmhs9AEZ/view?usp=drive_link'
+        }
+
+        function openForm471_Fillable(){
+            window.location.href = 'https://drive.google.com/file/d/1FA7EG9alc2dYC-qwWRzIFiWMd-dX3KNO/view?usp=drive_link'
+        }
+
+        function openOmnipod_5_Letter_of_Request_Example(){
+            window.location.href = 'https://drive.google.com/file/d/1Gt6IKDefxCiQyvkEkjzloMJwx4cboIo6/view?usp=drive_link'
+        }
+
+        function openPT_To_KEPRO_Letter(){
+            window.location.href = 'https://drive.google.com/file/d/1Oe0NdrVv8FgfPFxOYgL_KDAO6PUTBXmv/view?usp=drive_link'
+        }
+
+    </script>
+</body>
+</html>

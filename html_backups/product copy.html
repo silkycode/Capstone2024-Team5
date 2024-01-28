@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200vh;
+      margin: 0;
+      background-color: #242424;
+      color: rgba(255, 255, 255, 0.87);
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px;
+      background-color: #9b9ff3;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #9b9ff3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+    <h1>
+        Products
+      </h1>
+      <img src="https://www.aimplusmedicalsupplies.com/wp-content/uploads/2023/04/Dexcom-G7-Aim-Plus-Medical-Supplies.jpg" alt="Continuous Glucose Monitoring" width="500" height="600">
+      <button id="viewContinuous_Glucose_Monitoring_Button" onclick="viewContinuous_Glucose_Monitoring()">View Continuous Glucose Monitoring</button>
+
+      <img src="https://www.aimplusmedicalsupplies.com/wp-content/uploads/2021/04/contournext.jpg" alt="Diabetic testing supplies" width="500" height="600">
+      <button id="viewDiabetic_Testing_Supplies_Button" onclick="viewDiabetic_Testing_Supplies()">View Diabetic Testing Supplies</button>
+
+      <img src="https://www.aimplusmedicalsupplies.com/wp-content/uploads/2020/04/2300x1440_tslimX2_CGM_System_wShare-980x613.png" alt="Insulin Pumps" width="500" height="600">
+      <button id="viewInsulin_Pumps_Button" onclick="viewInsulin_Pumps()">View Insulin Pumps</button>
+
+    <script>
+        function viewContinuous_Glucose_Monitoring() {
+            alert('View Continuous Glucose Monitoring clicked!');
+        }
+
+        function viewDiabetic_Testing_Supplies() {
+            alert('View Diabetic testing supplies clicked!');
+        }
+
+        function viewInsulin_Pumps() {
+            alert('View Insulin Pumps clicked!');
+        }
+
+    </script>
+</body>
+</html>

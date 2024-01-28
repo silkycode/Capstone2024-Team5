@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Patient Form</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #242424;
+      color: rgba(255, 255, 255, 0.87);
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input {
+      margin-bottom: 16px;
+      padding: 8px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #646cff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #535bf2;
+    }
+  </style>
+</head>
+<body>
+  <h1>New Patient Form</h1>
+  <form id="patientForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <button type="button" onclick="submitNewPatientForm()">Submit</button>
+  </form>
+
+  <script>
+    function submitNewPatientForm() {
+      // Retrieve form data
+      const name = document.getElementById('name').value;
+      const birthdate = document.getElementById('birthdate').value;
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Check for missing information
+      if (!name || !birthdate || !username || !password || !confirmPassword) {
+        alert('Please fill in all fields.');
+      } else {
+        alert('Thank you for submitting the information!');
+        // You can add more sophisticated logic here, e.g., sending data to a server
+      }
+    }
+  </script>
+</body>
+</html>
+
