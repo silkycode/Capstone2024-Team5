@@ -4,65 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aim Plus Medical Supplies</title>
-    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/css/index.css">
     <script src="./src/js/index.js"></script>
   </head>
 
   <body>
     <div id="root">
       <div class="header">
-        <div class="left-components">
+        <div class="company-info">
           <h1>Aim Plus Medical Supplies</h1>
         </div>
-        <div class="right-components">
-          <nav class="navigation-options">
-            <ul>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="navigation-options">
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <div class="landing-card">
-        <div class="image-container">
-          <img src="./src/assets/undraw_tree_swing_re_pqee.svg" alt="Login graphic">
-        </div>
-        
-        <div id="login-container" style="display:none">
-          <form id="login-form">
-            <input type="text" placeholder="Username" id="username" name="username">
-            <input type="text" placeholder="Password" id="password" name="password">
-            <div class="toggle">
-              <input type="checkbox" id="remember" class="toggle">
-              <label for="remember" class="toggle-label">Remember Me</label>
-            </div>
-            <a href="#">Forgot Password?</a>
-            <button class="login-button">Log In</button>
-          </form>
-        </div>
-  
-        <div id="new-patient-container" style="display:none">
-          <form id="new-patient-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="birthdate">Birthdate:</label>
-            <input type="date" id="birthdate" name="birthdate" required>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-            <button type="button" onclick="submitNewPatientForm()">Submit</button>
-          </form>
-        </div>
-
-        <div class="form-button-container">
-          <button onclick="showLoginForm()" id="loginForm">Log In</button>
-          <button onclick="showNewPatientForm()" id="newPatientForm">New Patient</button>
-        </div>
+      <div class="landing">
+          <div id="login-container" style="display:none">
+            <form id="login-form">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username">
+              <label for="password">Password</label>
+              <input type="text" id="password" name="password">
+              <div class="login-options">
+                <input type="checkbox" id="remember" class="toggle">
+                <label for="remember" class="toggle-label">Remember Me</label>
+                <a href="#">Forgot Password?</a>
+              </div>
+              <button type="button" class="login-button" onclick="dummyLogin()">Log In</button>
+            </form>
+          </div>
+          <div id="new-patient-container" style="display:none">
+            <form id="new-patient-form">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required>
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="Last-name" name="Last-name" required>
+              <label for="birthdate">Birthdate:</label>
+              <input type="date" id="birthdate" name="birthdate" required>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              <label for="confirmPassword">Confirm Password:</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" required>
+              <button type="submit" class="submit-new-patient-button" onclick="dummySubmitNewPatientForm()">Submit</button>
+            </form>
+          </div>
+          <div class="form-button-container" id="form-buttons">
+            <h2>Welcome!</h2>
+            <button onclick="showLoginForm()" id="loginFormButton">Log In</button>
+            <button onclick="showNewPatientForm()" id="newPatientFormButton">New Patient?</button>
+          </div>
       </div>
     </div>
   </body>
