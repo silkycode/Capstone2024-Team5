@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aim Plus Medical Supplies</title>
     <link rel="stylesheet" href="./src/index.css">
+    <script src="./src/js/index.js"></script>
   </head>
   <body>
     <div id="root">
@@ -53,20 +54,5 @@
       </div>
 
     </div>
-    <script>
-      function showLoginForm() {
-        document.getElementById('loginForm').style.display = 'none';
-        document.getElementById('newPatientForm').style.display = 'block';
-        document.getElementById('login-container').style.display = 'block';
-        document.getElementById('new-patient-container').style.display = 'none';
-      }
-
-      function showNewPatientForm() {
-        document.getElementById('newPatientForm').style.display = 'none';
-        document.getElementById('loginForm').style.display = 'block';
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('new-patient-container').style.display = 'block';
-      }
-    </script>
   </body>
 </html>
