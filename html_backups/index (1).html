@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #242424;
+      color: rgba(255, 255, 255, 0.87);
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input {
+      margin-bottom: 16px;
+      padding: 8px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #646cff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #535bf2;
+    }
+
+    .forgot-password {
+      margin-top: 16px;
+      color: #888;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>AIM Plus Medicial Supplies Portal</h1>
+    <div class="card">
+        <button id="loginButton" onclick="openLoginPage()">Log in</button>
+      <button id="newPatientButton" onclick="openNewPatientForm()">New Patient</button>
+    </div>
+  </div>
+
+  <script>
+    function openLoginPage() {
+      // Open the login page in a new window
+      const loginWindow = window.open('login-page.html', 'LoginPage', 'width=400,height=400');
+    }
+
+    // Function to open new patient form in a new window
+    function openNewPatientForm() {
+      // Open the new patient form in a new window
+      const newPatientWindow = window.open('new-patient-form.html', 'NewPatientForm', 'width=400,height=500');
+    }
+  </script>
+</body>
+</html>
