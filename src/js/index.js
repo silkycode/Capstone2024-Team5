@@ -22,14 +22,13 @@ function dummySubmitNewPatientForm() {
   window.location.href = 'index.html';
 }
 
-
 // To add: stronger validation for correct username/password format (TBD)
 function validateLoginForm() {
   var usernameInput = document.getElementById("login-username");
   var passwordInput = document.getElementById("login-password");
 
-  var usernameError = document.getElementById("usernameError");
-  var passwordError = document.getElementById("passwordError");
+  var usernameError = document.getElementById("username-error");
+  var passwordError = document.getElementById("password-error");
 
   usernameError.innerHTML = "";
   passwordError.innerHTML = "";

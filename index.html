@@ -27,11 +27,11 @@
           <form id="login-form">
             <label for="username">Username</label>
             <input type="text" id="login-username" name="username" required>
-            <span id="usernameError" class="error"></span>
+            <span id="username-error" class="error-message"></span>
 
             <label for="password">Password</label>
             <input type="password" id="login-password" name="password" required>
-            <span id="passwordError" class="error"></span>
+            <span id="password-error" class="error-message"></span>
 
             <div class="login-options">
               <input type="checkbox" id="remember" class="toggle">
@@ -45,50 +45,65 @@
           <form id="new-patient-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-
+            <span id="name-error" class="error-message"></span>
+        
             <label for="birthdate">Birthdate:</label>
             <input type="date" id="birthdate" name="birthdate" required>
+            <span id="birthdate-error" class="error-message"></span>
         
             <label for="Primary Phone">Primary Phone:</label>
-            <input type="text" id="Primary Phone" name="Primary Phone" required>
+            <input type="number" id="Primary Phone" name="Primary Phone" required>
+            <span id="primaryPhone-error" class="error-message"></span>
         
             <label for="Secondary Phone">Secondary Phone:</label>
-            <input type="text" id="Secondary Phone" name="Secondary Phone" required>
+            <input type="number" id="Secondary Phone" name="Secondary Phone" required>
+            <span id="secondaryPhone-error" class="error-message"></span>
         
             <label for="City/State/Zip">City/State/Zip:</label>
             <input type="text" id="City/State/Zip" name="City/State/Zip" required>
+            <span id="cityStateZip-error" class="error-message"></span>
         
             <label for="Primary Insurance">Primary Insurance:</label>
             <input type="text" id="Primary Insurance" name="Primary Insurance" required>
+            <span id="primaryInsurance-error" class="error-message"></span>
         
             <label for="ID#">ID#:</label>
-            <input type="text" id="ID#" name="ID#" required>
+            <input type="number" id="ID#" name="ID#" required>
+            <span id="id-error" class="error-message"></span>
         
             <label for="Contact Person">Contact Person:</label>
             <input type="text" id="Contact Person" name="Contact Person" required>
+            <span id="contactPerson-error" class="error-message"></span>
         
             <label for="Email">Email:</label>
-            <input type="text" id="Email" name="Email" required>
+            <input type="email" id="Email" name="Email" required>
+            <span id="email-error" class="error-message"></span>
         
             <label for="Doctor's Name">Doctor's Name:</label>
             <input type="text" id="Doctor's Name" name="Doctor's Name" required>
+            <span id="doctorsName-error" class="error-message"></span>
         
             <label for="Doctor's Phone Number">Doctor's Phone Number:</label>
-            <input type="text" id="Doctor's Phone Number" name="Doctor's Phone Number" required>
-            
+            <input type="number" id="Doctor's Phone Number" name="Doctor's Phone Number" required>
+            <span id="doctorsPhoneNumber-error" class="error-message"></span>
+        
             <label for="Doctor's Fax">Doctor's Fax:</label>
-            <input type="text" id="Doctor's Fax" name="Doctor's Fax" required>
+            <input type="number" id="Doctor's Fax" name="Doctor's Fax" required>
+            <span id="doctorsFax-error" class="error-message"></span>
         
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
+            <span id="username-error" class="error-message"></span>
         
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+            <span id="password-error" class="error-message"></span>
         
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span id="confirmPassword-error" class="error-message"></span>
         
-            <button type="button" onclick="dummySubmitNewPatientForm()">Submit</button>
+            <button type="button" onclick="validateNewPatientForm()">Submit</button>
           </form>
         </div>
         <div class="form-button-container" id="form-buttons">
