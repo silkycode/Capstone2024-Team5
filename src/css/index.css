@@ -102,10 +102,16 @@ nav a {
 #login-form input,
 #new-patient-form input {
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: 1px solid #686868;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+#login-form span,
+#new-patient-form span {
+    color: rgb(206, 0, 0);
+    font-weight: bold;
 }
 
 #login-form label,
